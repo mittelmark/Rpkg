@@ -1,4 +1,4 @@
-library(hanna)
+library(pkgname)
 
 x = 2 + 2
 

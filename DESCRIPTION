@@ -1,10 +1,10 @@
-Package: hanna
+Package: pkgname
 Type: Package
-Title: Winner-looser effects for social network efficiency simulated using Monte Carlo simulations
+Title: your package title
 Version: 0.1
 Date: 2023-02-05
-Author: Detlef Groth, University of Potsdam, Germany
-Maintainer: Detlef Groth <dgroth@uni-potsdam.de>
-Description: R code for the paper.
+Author: Max Musterman, University of Mustercity
+Maintainer: Max Musterman <musti@uni-mustercity.de>
+Description: R package for ...
 License: MIT + file LICENSE
 NeedsCompilation: no
