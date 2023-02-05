@@ -2,7 +2,9 @@
 title: "Vignette for the package ..."
 author: Max Musterman
 date: 2023-02-05
-output: rmarkdown::html_vignette
+output: 
+    rmarkdown::html_vignette:
+        toc: true
 vignette: >
   %\VignetteIndexEntry{Vignette Title}
   %\VignetteEngine{knitr::rmarkdown}
@@ -28,9 +30,9 @@ print(x)
 data(iris)
 par(mfrow=c(1,2),mai=rep(0.8,4))
 plot(iris$Sepal.Width~iris$Sepal.Length,
-    col=as.numeric(iris$Species+1),pch=15)
+    col=as.numeric(iris$Species)+1,pch=15)
 plot(iris$Petal.Width~iris$Petal.Length,
-    col=as.numeric(iris$Species+1),pch=15)
+    col=as.numeric(iris$Species)+1,pch=15)
 ```
 
 ## Table Example
@@ -39,6 +41,9 @@ plot(iris$Petal.Width~iris$Petal.Length,
 knitr::kable(head(iris))
 ```
 
+## Inline expression
+
+The dataset iris has `r nrow(iris)` plants.
 
 ## EOF
 
