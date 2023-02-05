@@ -1,4 +1,4 @@
-library(pkgname)
+library(Rpkg)
 
 x = 2 + 2
 
