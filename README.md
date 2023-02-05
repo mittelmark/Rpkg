@@ -36,4 +36,5 @@ R CMD build .
 R CMD check pkgname_version.tar.gz
 R CMD INSTALL pkgname_version.tar.gz
 ```
-```
+
+In case of bugs and suggestions, use the [https://github.com/mittelmark/Rpkg/issues](issues) link on top.
