@@ -34,7 +34,7 @@ Rscript bin/rman.R R/add.R
 This approach, embedding the documentation in the R file and then extracting
 it into the man-folder is very similar to that of the documentation tool
 [roxygen2](https://cran.r-project.org/web/packages/roxygen2/index.html), but
-here you do not need the roxygen2 package with all the depencies, just this simple extraction script
+here you do not need the roxygen2 package with all the dependencies, just this simple extraction script
 `bin/rman.R`. There is as well a Makefile file which provides the necessary
 commands to build and install the package and which does as well a check if the R file is newer
 than the Rd file and only then does the required update. If you use make you
