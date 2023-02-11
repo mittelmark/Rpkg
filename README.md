@@ -8,8 +8,14 @@ You need to edit thereafter at least two files where your place the right
 package name and change the other relevant information like author, license
 etc.
 
-* DESCRRIPTION
+* DESCRIPTION
 * tests/test-add.R
+
+If you do not want to create a package vignette just remove the entry in the
+description file with the vignette information, so the lines starting with
+`Suggests:` and `VignetteBuilder:`. Your package has then zero dependencies from other R packages.
+
+
 
 To build, check and install this package you need only an installed R. If you
 create your repository you have to change the relevant parts entering, package
