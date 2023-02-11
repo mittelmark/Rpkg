@@ -76,10 +76,13 @@ The following files are included in this package template and will be required f
 * `NAMESPACE` - the file containing the export statements, usually all functions with lower case methods are exported
 * `LICENSE` - license files can be replaced if you prefere other licenses, such as GPL or BSD
 * `R/add.R` - example R code file with embedded documentation
-* `Makefile` - a file for make containing essential commands to build and check the package, should be not part of the installed package
+* `man/add.Rd` - example R documentation file 
 
-* `README.md` - this Readme your are reading, should be not part of your package
-* `bin/rman.R` - simple R script to extract documentation from the R files, can be used for your own package instead of using roxygen2 documentation
+The following files are usually not part of your package:
+
+* `Makefile` - a file for make containing essential commands to build and check the package, should be not part of the installed package, but might be helpful during development
+* `bin/rman.R` - simple R script to extract documentation from the R files, can be used for your own package instead of using roxygen2 documentation, if you edit the files in the `man` folder directly you do not need this file
+* `README.md` - this Readme your are reading, should be not part of your package, replace it wiht your own Readme file
 
 
 ## Author and Copyright
