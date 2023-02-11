@@ -4,7 +4,18 @@ A generic R package template.
 
 Just use the green "Use this template" link on top to create your own R-package in Github.
 
-To build, check and install this package you need only an installed R. If you create your repository you have to change the relevant parts entering, package name, author etc in the description file and the library call in the file tests/test-add.R. Then you can start a first check if the package is installable.
+You need to edit thereafter at least two files where your place the right
+package name and change the other relevant information like author, license
+etc.
+
+* DESCRRIPTION
+* tests/test-add.R
+
+To build, check and install this package you need only an installed R. If you
+create your repository you have to change the relevant parts entering, package
+name, author etc in the description file and the library call in the file
+tests/test-add.R. Then you can start a first check if the package is
+installable.
 
 
 The commands are the following:
