@@ -77,6 +77,7 @@ The following files are included in this package template and will be required f
 * `LICENSE` - license files can be replaced if you prefere other licenses, such as GPL or BSD
 * `R/add.R` - example R code file with embedded documentation
 * `man/add.Rd` - example R documentation file 
+* `vignettes/tutorial.Rmd` - a template for a package vignette, if not desired just delete the folder `vignettes` and update the `DESCRIPTION` file
 
 The following files are usually not part of your package:
 
@@ -93,4 +94,4 @@ License: MIT License see the file [LICENSE](LICENSE) for details.
 
 ## Bug reporting
 
-In case of bugs and suggestions, use the [https://github.com/mittelmark/Rpkg/issues](issues) link on top.
+In case of bugs and suggestions, use the [issues](https://github.com/mittelmark/Rpkg/issues) link on top.
