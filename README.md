@@ -16,7 +16,7 @@ description file with the vignette information, so the lines starting with
 `Suggests:` and `VignetteBuilder:`. Your package has then zero dependencies from other R packages.
 
 
-## Build and Install test
+## Build and install test from the terminal
 
 To build, check and install this package you need only an installed R. If you
 create your repository you have to change the relevant parts entering, package
@@ -66,6 +66,25 @@ Rscript bin/rman.R R/add.R
 R CMD build .
 R CMD check pkgname_version.tar.gz
 R CMD INSTALL pkgname_version.tar.gz
+```
+
+## Build and install from a R console
+
+Sometimes you might prefer the build and check the package directly
+from  the R  console  that  might  look  like  this if you are in the  package
+developers folder:
+
+```r
+setwd("package-folder")
+### build the documentation
+source('bin/rman.R')
+extractRd(list.files("R",pattern="*.R$",full.names=TRUE))
+### build the package file
+tools:::.build_packages(".")
+### check the package
+tools:::.check_packages("pkgname_0.1.tar.gz")
+### install the package
+install.packages("pkgname_0.1.tar.gz",repos=NULL)
 ```
 
 ## Files
