@@ -55,3 +55,12 @@ Hidden = function (x) {
     return(x+1)
 }
 
+
+###  place startup loads here
+.onLoad <- function(libname, pkgname) {
+    # to show a startup message
+    # example on how to initialize a Tcl package 
+    # tcltk::.Tcl(paste("lappend auto_path",file.path(system.file(package="Rpkg"),"pantcl", "lib")))
+    # tcltk::.Tcl("package require tclfilters")
+    # tools::vignetteEngine("pantcl",package=pkgname,weave=pantcl,tangle=ptangle)
+}
