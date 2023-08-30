@@ -1,4 +1,4 @@
-# Rpkg
+# Rpkg ![](https://github.com/mittelmark/Rpkg/actions/workflows/r.yml/badge.svg)
 
 A generic R package template.
 
