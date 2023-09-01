@@ -1,9 +1,9 @@
 VERSION := $(shell grep Version: DESCRIPTION | perl -pe 's/.+: //')
 PKG     := $(shell basename `pwd`)
-build:
+build: man/add.Rd
 	R CMD build .
 
-check: build man/add.Rd
+check: build 
 	echo $(VERSION)
 	R CMD check $(PKG)_$(VERSION).tar.gz
 
