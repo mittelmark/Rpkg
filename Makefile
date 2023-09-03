@@ -4,7 +4,6 @@ build: man/add.Rd
 	R CMD build .
 
 check: build 
-	echo $(VERSION)
 	R CMD check $(PKG)_$(VERSION).tar.gz
 
 man/%.Rd: R/%.R

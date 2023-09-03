@@ -1,7 +1,7 @@
 Package: Rpkg
 Type: Package
 Title: your package title change the name on top
-Version: 0.1
+Version: 0.0.1
 Date: 2023-02-05
 Author: Max Musterman, University of Mustercity
 Maintainer: Max Musterman <musti@uni-mustercity.de>
