@@ -1,3 +1,14 @@
+## function documentation is directly embedded within
+## the R code
+## you can automatically extract the documentation using the bin/rman.R script
+## by executing: using this like Rscript bin/rman.R R/add.R
+## or from within the R-console:
+## > setwd("package-folder")
+## > source('bin/rman.R')
+## > extractRd(list.files("R",pattern="*.R$",full.names=TRUE))
+
+## Function documentation, protect percent signs % with backslashes \%
+
 #' \name{add}
 #' \alias{add}
 #' \title{ add two numbers }
@@ -50,6 +61,11 @@ add <- function (x, y) {
 testprint <- function (txt) {
     print(txt)
 }
+
+## Functions or variables starting with uppercase letters
+## will be per default not export, they can be used as 
+## internal package functions not accessible by the user
+## of the package
 
 Hidden = function (x) {
     return(x+1)
