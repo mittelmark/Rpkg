@@ -3,7 +3,7 @@
 \title{Rpkg package - package template for R packages} 
 \description{The Rpkg package can be used as a template to create new packages from scratch.} 
 \details{Some more details: 
-The following list of objects and/or functions is available: 
+The following list of objects and/or functions are available: 
 \describe{ 
 \item{\link[Rpkg:add]{add(x,y)}}{an illustrative add function} 
 } 
