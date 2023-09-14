@@ -83,13 +83,9 @@ setwd("mypkg")
 ### build the documentation
 source('bin/rman.R')
 extractRd(list.files("R",pattern="*.R$",full.names=TRUE))
-### you should check the DESCRIPTION file for the package name 
+### you should now check the DESCRIPTION file for the package name 
+### (the package name should be the matching folder name)
 ### version, author etc and change it accordingly 
-file.edit("DESCRIPTION")
-### change the test file to match the package name
-file.edit("tests/tests-add.R")
-### change all references to Rpkg to your right package name
-file.edit("R/add.R")
 ### and thereafter build the package file
 system("R CMD build .")
 list.files(pattern=".tar.gz")

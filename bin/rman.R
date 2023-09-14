@@ -3,6 +3,13 @@
 #args = commandArgs(trailingOnly=TRUE)
 
 extractRd <- function (args) {
+    if (!file.exists("DESCRIPTION")) {
+        stop("Script must be run in the package folder!")
+    } 
+    pkgname=basename(getwd())
+    if (pkgname != "Rpkg" & file.exists("man/Rpkg-package.Rd")) {
+        replaceRpkg()
+    }
     for (file in args) {
         if (!file.exists(file)) {
             stop(paste("Error: File",file,"does not exists"))
@@ -30,6 +37,22 @@ extractRd <- function (args) {
         close(fin)
     }
 }
+
+replaceRpkg <- function (pkgname=NULL) {
+    if (is.null(pkgname)) {
+        if (!file.exists("DESCRIPTION")) {
+            stop("Script must be run in the package folder!")
+        } 
+        pkgname=basename(getwd())
+    }
+    for (file_path in c("tests/add-tests.R","R/add.R","DESCRIPTION")) {
+        file_content <- readLines(file_path, warn = FALSE)
+        mod = gsub("Rpkg",pkgname,file_content)
+        writeLines(mod, file_path)
+    }
+    file.remove("man/Rpkg-package.Rd")
+}
+ 
 main <- function (argv) {
     extractRd(argv)
 }
