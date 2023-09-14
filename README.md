@@ -86,11 +86,15 @@ extractRd(list.files("R",pattern="*.R$",full.names=TRUE))
 ### you should check the DESCRIPTION file for the package name 
 ### version, author etc and change it accordingly 
 file.edit("DESCRIPTION")
+### change the test file to match the package name
+file.edit("tests/tests-add.R")
+### change all references to Rpkg to your right package name
+file.edit("R/add.R")
 ### and thereafter build the package file
-tools:::.build_packages(".")
+system("R CMD build .")
 list.files(pattern=".tar.gz")
 ### check the package
-tools:::.check_packages("mypkg_0.0.1.tar.gz")
+system("R CMD check mypkg_0.0.1.tar.gz --no-manual")
 ### install the package
 install.packages("mypkg_0.0.1.tar.gz",repos=NULL)
 ```

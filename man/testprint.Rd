@@ -10,6 +10,9 @@
 } 
 \examples{ 
     testprint("Hello World!") 
+    # sample file use 
+   dec=read.table(file.path(system.file(package="Rpkg"),"files","decathlon.tab")) 
+   head(dec) 
 } 
 \seealso{  See also \code{\link{add}} } 
 \keyword{ arith } 
