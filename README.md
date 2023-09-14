@@ -72,20 +72,30 @@ R CMD INSTALL pkgname_version.tar.gz
 
 Sometimes you might prefer the build and check the package directly
 from  the R  console  that  might  look  like  this if you are in the  package
-developers folder:
+developers folder, here an example session to create a package with the name `mypkg`:
 
 ```r
-setwd("package-folder")
+### download the latest package template and unpack it:
+download.file("https://github.com/mittelmark/Rpkg/archive/refs/heads/main.zip","Rpkg.zip")
+unzip("Rpkg.zip")
+file.rename("Rpkg-main","mypkg")
+setwd("mypkg")
 ### build the documentation
 source('bin/rman.R')
 extractRd(list.files("R",pattern="*.R$",full.names=TRUE))
-### build the package file
+### you should check the DESCRIPTION file for the package name 
+### version, author etc and change it accordingly 
+file.edit("DESCRIPTION")
+### and thereafter build the package file
 tools:::.build_packages(".")
+list.files(pattern=".tar.gz")
 ### check the package
-tools:::.check_packages("pkgname_0.1.tar.gz")
+tools:::.check_packages("mypkg_0.0.1.tar.gz")
 ### install the package
-install.packages("pkgname_0.1.tar.gz",repos=NULL)
+install.packages("mypkg_0.0.1.tar.gz",repos=NULL)
 ```
+The first  functional  version  should be  something  like 0.1.0. For hints on
+versioning see [https://semver.org/](https://semver.org/).
 
 ## Files
 
@@ -114,3 +124,4 @@ License: MIT License see the file [LICENSE](LICENSE) for details.
 ## Bug reporting
 
 In case of bugs and suggestions, use the [issues](../../issues) link on top.
+
