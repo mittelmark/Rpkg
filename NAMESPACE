@@ -1,1 +1,2 @@
 exportPattern("^[[:lower:]]+")
+importFrom("stats","rnorm")
